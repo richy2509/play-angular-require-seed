@@ -18,9 +18,10 @@ define([], function () {
             }
         };
 
-        $scope.change = function(){
+        $scope.change = function() {
             $scope.error = "";
-        }
+        };
+
     };
     LoginCtrl.$inject = ['$scope', '$location', 'userService'];
 
