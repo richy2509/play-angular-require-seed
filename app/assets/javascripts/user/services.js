@@ -25,6 +25,10 @@ define(['angular', 'common'], function (angular) {
     }
 
     return {
+      validated: function(credentials){
+        return !(!credentials.password || credentials.password.length < 8);
+
+      },
       loginUser: function (credentials) {
         return playRoutes.controllers.Application.login().post(credentials).then(function (response) {
           // return promise so we can chain easily
